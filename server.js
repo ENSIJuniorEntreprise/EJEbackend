@@ -28,6 +28,9 @@ app.use('/event', eventRouter);
 app.use('/subscriber', subscriberRouter);
 app.use('/auth', authRouter);
 app.use('/refresh', refreshRouter);
+app.get('/', (req, res) => {
+  res.json({ message: 'Hello from the server!' });
+});
 
 app.post('/send-emails', sendEmailToSubscribers);
 
